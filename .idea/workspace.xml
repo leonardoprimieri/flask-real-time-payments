@@ -4,20 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="073d69a8-82a7-49d0-b0cc-f5ee4c7438a3" name="Changes" comment="makefile">
-      <change afterPath="$PROJECT_DIR$/static/template_img/img/404.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/template_img/img/basket.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/template_img/img/check.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/template_img/img/clock.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/template_img/img/currency.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/template_img/img/qrcode.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/template_img/img/tag.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/404.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/confirmed_payment.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/payment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="073d69a8-82a7-49d0-b0cc-f5ee4c7438a3" name="Changes" comment="feat: payment and html pages">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/payment.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/payment.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -223,7 +213,15 @@
       <option name="project" value="LOCAL" />
       <updated>1767392686434</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="feat: payment and html pages">
+      <option name="closed" value="true" />
+      <created>1767393872661</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1767393872661</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -249,6 +247,7 @@
     <MESSAGE value="feat: create route to return pix qr code img" />
     <MESSAGE value="refactor: function name" />
     <MESSAGE value="makefile" />
-    <option name="LAST_COMMIT_MESSAGE" value="makefile" />
+    <MESSAGE value="feat: payment and html pages" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: payment and html pages" />
   </component>
 </project>
