@@ -2,6 +2,7 @@ from flask import Flask, jsonify, request
 from repository.database import db
 from db_models.payment import Payment
 from datetime import datetime, timedelta
+from payments.pix import Pix
 
 app = Flask(__name__)
 
@@ -11,7 +12,7 @@ app.config['SECRET_KEY'] = 'APP_SECRET_KEY'
 db.init_app(app)
 
 @app.route('/payments/pix', methods=['POST'])
-def create_payment_pix():
+def create_pix_payment():
     data = request.get_json()
 
     if 'value' not in data:
@@ -22,8 +23,14 @@ def create_payment_pix():
 
     new_payment = Payment(value=data['value'], expiration_date=expiration_date)
 
+    pix = Pix()
+    pix_data = pix.create_payment()
+    new_payment.bank_payment_id = pix_data['bank_payment_id']
+    new_payment.qr_code = pix_data['qr_code_path']
+
     db.session.add(new_payment)
     db.session.commit()
+
 
     return jsonify({"message": "Payment successfully created.", "payment": new_payment.to_dict()})
 
