@@ -6,7 +6,7 @@ class Pix:
         pass
 
     @staticmethod
-    def create_payment():
+    def register_payment_on_partner_bank():
         bank_payment_id = str(uuid.uuid4())
 
         qr_code_image_name = f'qr_code_{bank_payment_id}'

@@ -18,13 +18,12 @@ def create_pix_payment():
     if 'value' not in data:
         return jsonify({"message": "Invalid value."}), 400
 
-    # current date + 30 mins
-    expiration_date = datetime.now() + timedelta(minutes=30)
+    current_date_plus_30_mins = datetime.now() + timedelta(minutes=30)
 
-    new_payment = Payment(value=data['value'], expiration_date=expiration_date)
+    new_payment = Payment(value=data['value'], expiration_date=current_date_plus_30_mins)
 
     pix = Pix()
-    pix_data = pix.create_payment()
+    pix_data = pix.register_payment_on_partner_bank()
     new_payment.bank_payment_id = pix_data['bank_payment_id']
     new_payment.qr_code = pix_data['qr_code_path']
 
